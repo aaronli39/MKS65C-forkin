@@ -1,5 +1,5 @@
 all:
-	gcc fork.c
+	gcc forkin.c
 
 run:
 	./a.out
