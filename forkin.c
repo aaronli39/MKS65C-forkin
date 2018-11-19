@@ -38,16 +38,16 @@ int main() {
             exit(1);
         } else { // child two
             printf("Child: %d\n", getpid());
-            sleepe = abs(get_random()) / 123456745;
+            sleepe = abs(get_random()) % 5;
             sleep(sleepe);
-            printf("Done sleeping\n");
+            printf("Done sleeping: PPID: %d\n", getppid());
             return sleepe;
         }
     } else { // child one
         printf("Child: %d\n", getpid());
-        sleepe = abs(get_random()) / 123456755;
+        sleepe = abs(get_random()) % 5;
         sleep(sleepe);
-        printf("Done sleeping\n");
+        printf("Done sleeping: PPID: %d\n", getppid());
         return sleepe;
     }
 
